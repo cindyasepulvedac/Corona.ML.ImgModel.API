@@ -36,6 +36,10 @@ class PredictionRequest(BaseModel):
     image: str
     access_token: str
 
+@app.get('/')
+def greeting():
+    return 'Hola mundo'
+
 @app.post('/token', tags=['Authentication'])
 def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     user = users.get(form_data.username)
