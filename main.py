@@ -1,5 +1,5 @@
 import uvicorn
-from fastapi import FastAPI, HTTPException, status, Depends
+from fastapi import FastAPI, HTTPException, status, Depends, Response
 from fastapi.responses import JSONResponse
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
@@ -68,7 +68,7 @@ def predict(request: PredictionRequest):
         else:
 
             ## Cargar modelo serializado
-            with open(r'.\clf.pickle', 'rb') as f:
+            with open('clf.pickle', 'rb') as f:
                 clf = pickle.load(f)
             
             ## Decodificar la imagen de base64 a bytes
