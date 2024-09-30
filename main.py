@@ -12,8 +12,8 @@ import base64
 from PIL import Image
 
 users = {
-    'pepito': {'username':'pepito', 'email':'pepito@corona.com', 'password':'123'},
-    'matilda': {'username':'matilda', 'email':'matilda@corona.com', 'password':'789'}
+    'user1': {'username':'user1', 'email':'user1@corona.com', 'password':'123'},
+    'user2': {'username':'user2', 'email':'user2@corona.com', 'password':'789'}
 }
 
 app = FastAPI()
