@@ -38,7 +38,7 @@ class PredictionRequest(BaseModel):
 
 @app.get('/')
 def greeting():
-    return 'Hola mundo'
+    return 'Hand-written digits recognizing model'
 
 @app.post('/token', tags=['Authentication'])
 def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
